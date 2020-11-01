@@ -20,6 +20,11 @@ async function main() {
  
   await datastore.save(task);
   console.log(`Saved ${task.key.name}: ${task.data.description}`);
+
+  console.log('exiting in 10 seconds');
+  setTimeout(() => {
+    process.exit(0);
+  }, 10000)
 }
 
 main();
